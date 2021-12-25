@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="TAMBAH DATA BAJU"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="16dp"
+                android:background="@color/cardview_light_background"
+                android:elevation="1dp"
+                android:layout_marginTop="150dp">
+
+                <TextView
+                    android:id="@+id/txt_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Brand Baju"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+                <EditText
+                    android:id="@+id/ed_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/black"/>
+
+
+
+                <TextView
+                    android:id="@+id/jenis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Baju"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_kaos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kaos"
+                        android:textColor="@color/black"/>
+                    <RadioButton
+                        android:id="@+id/rb_polo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Polo"
+                        android:textColor="@color/black"/>
+                    <RadioButton
+                        android:id="@+id/rb_kemeja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Kemeja"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txt_ukuran"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ukuran"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="59dp"
+                        android:text="S"
+                        android:textColor="@color/black" />
+                    <CheckBox
+                        android:id="@+id/cb_m"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:text="M"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/black"/>
+                    <CheckBox
+                        android:id="@+id/cb_l"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:text="L"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/black"/>
+                    <CheckBox
+                        android:id="@+id/cb_xl"
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:text="XL"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_jumlah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"/>
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:max="50"
+                    android:backgroundTint="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_ptjml"
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:hint="0/50"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_input"
+                    android:layout_width="165dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="32dp"
+                    android:text="INPUT"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/teal_700"
+                    android:onClick="inputData"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
